@@ -1,6 +1,6 @@
 {
   "name": "@chukamorka/learnstorybook-design-system",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -21,7 +21,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "release": "auto shipit --base-branch=master",
-    "pub": "npm version patch --force && npm publish"
+    "pub": "yarn version patch --force && yarn publish"
   },
   "eslintConfig": {
     "extends": [
