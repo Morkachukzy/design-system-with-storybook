@@ -37,5 +37,4 @@ jobs:
           yarn install --frozen-lockfile
           yarn build
           yarn pub
-          git push --follow-tags origin master
           yarn auto release
