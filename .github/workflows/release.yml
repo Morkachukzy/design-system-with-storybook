@@ -11,9 +11,6 @@ jobs:
   release:
     # The operating system it will run on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
 
     if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
     steps:
@@ -21,9 +18,9 @@ jobs:
       - name: Prepare repository
         run: git fetch --unshallow --tags
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14
           registry-url: "https://registry.npmjs.org"
           cache: "npm"
 
@@ -37,7 +34,7 @@ jobs:
           yarn build
           npm version --patch
           npm --allow-same-version version  -m "Bump version to: %s [skip ci]"
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           npm publish --access=public
           git push --follow-tags origin master
           yarn auto release
