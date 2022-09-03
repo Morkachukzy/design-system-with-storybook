@@ -21,7 +21,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "release": "auto shipit --base-branch=master",
-    "pub": "yarn version patch --new-version && yarn publish"
+    "pub": "yarn version --patch  && yarn publish"
   },
   "eslintConfig": {
     "extends": [
