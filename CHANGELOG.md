@@ -1,3 +1,15 @@
+# v0.1.7 (Sat Sep 03 2022)
+
+#### ⚠️ Pushed to `master`
+
+- update gitignore (61619525+Morkachukzy@users.noreply.github.com)
+
+#### Authors: 1
+
+- Chukwuka Morka ([@Morkachukzy](https://github.com/Morkachukzy))
+
+---
+
 # v0.1.3 (Sat Sep 03 2022)
 
 #### ⚠️ Pushed to `master`
