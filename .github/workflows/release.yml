@@ -36,7 +36,6 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn build
-          yarn --allow-same-version version 0.1.0 -m "Bump version to: %s [skip ci]"
-          yarn publish --access=public
+          yarn pub
           git push --follow-tags origin master
           yarn auto release
