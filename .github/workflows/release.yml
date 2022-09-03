@@ -29,7 +29,7 @@ jobs:
 
       - name: Create Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #👇 npm token, see https://storybook.js.org/tutorials/design-systems-for-developers/react/en/distribute/ to obtain it
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
@@ -37,6 +37,7 @@ jobs:
           yarn build
           npm version --patch
           npm --allow-same-version version  -m "Bump version to: %s [skip ci]"
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
           npm publish --access=public
           git push --follow-tags origin master
           yarn auto release
