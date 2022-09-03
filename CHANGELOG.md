@@ -12,6 +12,18 @@
 
 # v0.1.3 (Sat Sep 03 2022)
 
+#### ⚠️ Pushed to `master`
+
+- add release script to package.json ([@Morkachukzy](https://github.com/Morkachukzy))
+
+#### Authors: 1
+
+- Chukwuka Morka ([@Morkachukzy](https://github.com/Morkachukzy))
+
+---
+
+# v0.1.3 (Sat Sep 03 2022)
+
 
 
 ---
